@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+let count2=0;
 
+console.log("123");
+const UseState=()=>{
+ console.log("abc");
 
-
-const Usestate=()=>{
- 
-
-    let [count,setcount]=Usestate(0)
+    let [count,setcount]=useState(0);
     function fun1(){
+       setcount(count+1);
         console.log(count);
        
     }
+    count2++;
 
 return(
     <div>
     <div>{count}</div>
-    <button onClick={fun1}>{count}</button>
+    <button onClick={fun1}>increase</button>
+    <div>{count2}</div>
     </div>
 )
 
 
 
 }
-export default Usestate
+export default UseState
